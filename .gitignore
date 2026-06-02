@@ -1,0 +1,16 @@
+# Excluir directorios locales descargados de modulos remotos de GitHub
+**/.terraform/*
+
+# Excluir archivos de estado de produccion y desarrollo locales
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Excluir archivos con definiciones de variables locales sensibles o secretas
+*.tfvars
+*.tfvars.json
+
+# CRITICO: Evitar subir a la rama principal la clave privada .pem generada durante la ejecucion
+*.pem
+*.rsa
+*.key
