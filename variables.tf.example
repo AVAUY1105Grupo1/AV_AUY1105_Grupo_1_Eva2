@@ -139,7 +139,7 @@ variable "ssh_connect_user" {
 variable "s3_bucket_name" {
   description = "Nombre UNICO GLOBAL para el bucket de S3"
   type        = string
-  default     = "vampirenightxx-storage-bucket-auy1105"
+  default     = "vampirenightxx-storage-bucket-xxxx"
 }
 
 variable "s3_bucket_is_public" {
