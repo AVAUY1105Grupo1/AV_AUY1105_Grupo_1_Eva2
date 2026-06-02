@@ -1,0 +1,61 @@
+# ==============================================================================
+# 1. ARCHIVOS ESTRUCTURALES DE TERRAFORM (.terraform / State)
+# ==============================================================================
+# Directorio de trabajo local (contiene proveedores descargados como aws, tls y local)
+.terraform/
+
+# Archivos de estado local (CRÍTICO: contienen la configuración real y datos sensibles)
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info
+
+# Archivos de registro de fallos (Crash logs)
+crash.log
+crash.*.log
+
+# Archivos de anulación de configuración (Overrides)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Archivos de configuración de CLI de Terraform
+.terraformrc
+terraform.rc
+
+# ==============================================================================
+# 2. EXCLUSIONES ESPECÍFICAS SOLICITADAS
+# ==============================================================================
+# Exclusión explícita del archivo de definición de variables
+variables.tf
+
+# ==============================================================================
+# 3. LLAVES PRIVADAS, SECRETOS Y ARCHIVOS DE VALORES (.pem / .tfvars)
+# ==============================================================================
+# Bloquea la subida de llaves criptográficas (como tu VampireNightXX-key.pem)
+*.pem
+
+# Archivos genéricos de llaves privadas y certificados
+*.key
+*.pub
+id_rsa
+id_rsa.pub
+
+# Archivos de inyección de variables (aquí es donde suelen vivir los secretos reales)
+*.tfvars
+*.tfvars.json
+*.auto.tfvars
+*.auto.tfvars.json
+
+# Carpetas ocultas con credenciales (por si tienes perfiles de AWS locales)
+.aws/
+.env
+.env.*
+
+# ==============================================================================
+# 4. ARCHIVOS DEL SISTEMA OPERATIVO Y TEMPORALES
+# ==============================================================================
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
