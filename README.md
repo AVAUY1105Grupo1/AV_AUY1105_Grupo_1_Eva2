@@ -33,7 +33,7 @@ Para levantar toda la arquitectura de una sola vez, ejecuta los siguientes coman
    terraform apply
     ```
 ## Variables de Entrada (Inputs Centralizados)
-Toda la infraestructura se parametriza de forma centralizada en este repositorio. Las variables principales (definidas en variables.tf) incluyen:
+Toda la infraestructura se parametriza de forma centralizada en este repositorio. Las variables principales (definidas en variables.tf) incluyen (por ejemplo):
 
 Globales y Redes:
 
